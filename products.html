@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>james - Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/slick.css"/>
+    <link href="css/james css.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <a class="navbar-brand" href="index.html">
+                <strong><span>james</span> Fashion</strong>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">Story</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="d-none d-lg-block">
+                    <a href="login.html" class="bi-person custom-icon me-3"></a>
+                    <a href="cart.html" class="bi-bag custom-icon"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="products section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images\image 3.jpeg" alt="mens official" class="img-fluid">
+                            <h4>Mens official</h4>
+                            <p>KSH 2500.00</p>
+                            <label for="quantity-tree-pot">Quantity:</label>
+                            <input type="number" id="quantity-tree-pot" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'Mens official', price: 2500.00, quantity: parseInt(document.getElementById('quantity-tree-pot').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images\image 25.jpg" alt="Sun Hat" class="img-fluid">
+                            <h4>Sun Hat</h4>
+                            <p>KSH 1500.00</p>
+                            <label for="quantity-sun-hat">Quantity:</label>
+                            <input type="number" id="quantity-sun-hat" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'Sun Hat', price: 1500.00, quantity: parseInt(document.getElementById('quantity-sun-hat').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images\image 17.jpg" alt="T shirts" class="img-fluid">
+                            <h4>T shirts</h4>
+                            <p>KSH 400.00</p>
+                            <label for="quantity-floral-dress">Quantity:</label>
+                            <input type="number" id="quantity-floral-dress" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'T shirts', price: 400.00, quantity: parseInt(document.getElementById('quantity-floral-dress').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images/product/pexels-geyonk-1152077.jpg" alt="Leather Bag" class="img-fluid">
+                            <h4>Leather Bag</h4>
+                            <p>KSH 600.00</p>
+                            <label for="quantity-leather-bag">Quantity:</label>
+                            <input type="number" id="quantity-leather-bag" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'Leather Bag', price: 600.00, quantity: parseInt(document.getElementById('quantity-leather-bag').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images/product/pexels-paggiarofrancesco-704241.jpg" alt="Sunglasses" class="img-fluid">
+                            <h4>Sunglasses</h4>
+                            <p>KSH 200.00</p>
+                            <label for="quantity-sunglasses">Quantity:</label>
+                            <input type="number" id="quantity-sunglasses" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'Sunglasses', price: 200.00, quantity: parseInt(document.getElementById('quantity-sunglasses').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="product-item">
+                            <img src="images/product/pexels-sinileunen-5604128.jpg" alt="Denim Jacket" class="img-fluid">
+                            <h4>Denim Jacket</h4>
+                            <p>KSH 500.00</p>
+                            <label for="quantity-denim-jacket">Quantity:</label>
+                            <input type="number" id="quantity-denim-jacket" value="1" min="1">
+                            <button class="btn btn-primary" onclick="addToCart({ name: 'Denim Jacket', price: 500.00, quantity: parseInt(document.getElementById('quantity-denim-jacket').value) })">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-10 me-auto mb-4">
+                    <h4 class="text-white mb-3"><a href="index.html">james</a> Fashion</h4>
+                    <p class="copyright-text text-muted mt-lg-5 mb-4 mb-lg-0">Copyright © 2022 <strong>Little Fashion</strong></p>
+                    <p class="copyright-text">Designed by <a href="https://www.unknown-susp3nder.com/" target="_blank">unknown susp3nder</a></p>
+                </div>
+                <div class="col-lg-5 col-8">
+                    <h5 class="text-white mb-3">Sitemap</h5>
+                    <ul class="footer-menu d-flex flex-wrap">
+                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">Story</a></li>
+                        <li class="footer-menu-item"><a href="products.html" class="footer-menu-link">Products</a></li>
+                        <li class="footer-menu-item"><a href="privacy-policy.html" class="footer-menu-link">Privacy policy</a></li>
+                        <li class="footer-menu-item"><a href="faq.html" class="footer-menu-link">FAQs</a></li>
+                        <li class="footer-menu-item"><a href="contact.html" class="footer-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-4">
+                    <h5 class="text-white mb-3">Social</h5>
+                    <ul class="social-icon">
+                        <li><a href="#" class="social-icon-link bi-facebook"></a></li>
+                        <li><a href="#" class="social-icon-link bi-twitter"></a></li>
+                        <li><a href="#" class="social-icon-link bi-instagram"></a></li>
+                        <li><a href="#" class="social-icon-link bi-linkedin"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+        function addToCart(item) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the item already exists in the cart
+            let existingItem = cart.find(cartItem => cartItem.name === item.name);
+
+            if (existingItem) {
+                // If the item exists, update its quantity
+                existingItem.quantity += item.quantity;
+            } else {
+                // If the item doesn't exist, add it to the cart
+                cart.push(item);
+            }
+
+            // Save updated cart back to localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(item.name + ' has been added to your cart.');
+        }
+    </script>
+</body>
+</html>

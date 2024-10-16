@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>james Fashion - Payment</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><strong><span>james</span> Fashion</strong></a>
+        </div>
+    </nav>
+
+    <main>
+        <section class="payment section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12">
+                        <h2 class="mb-4">Payment</h2>
+                        
+                        <h4>Your Order Summary</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="order-items">
+
+                            </tbody>
+                        </table>
+
+                        <div class="order-summary">
+                            <h5 id="total-amount">Total: KSH 0.00</h5>
+                        </div>
+
+                        <div class="mpesa-payment">
+                            <p>Please click the button below to pay via MPesa:</p>
+                            <button class="btn btn-success" onclick="processMpesaPayment()">Pay with MPesa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function processMpesaPayment() {
+            let total = document.getElementById('total-amount').innerText;
+
+            alert("Proceeding with MPesa payment for " + total);
+
+            
+            window.location.href = "mpesa.html";  
+        }
+
+     
+        function calculateTotal() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let total = 0;
+            let orderItems = '';
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                orderItems += `
+                    <tr>
+                        <td>${item.name}</td>
+                        <td>${item.price.toFixed(2)}</td>
+                        <td>${item.quantity}</td>
+                        <td>${itemTotal.toFixed(2)}</td>
+                    </tr>
+                `;
+            });
+
+            document.getElementById('order-items').innerHTML = orderItems;
+            document.getElementById('total-amount').innerText = 'Total: KSH ' + total.toFixed(2);
+        }
+
+        window.onload = calculateTotal;
+    </script>
+</body>
+</html>
